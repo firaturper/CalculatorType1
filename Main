@@ -1,0 +1,152 @@
+package homework_1;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		BasitHesapMakineImpl basit = new BasitHesapMakineImpl();
+		MuhendislikHesapMakineImpl muh = new MuhendislikHesapMakineImpl();
+		//Hesap Makinesi Seçimi
+		 while(true) {
+		System.out.println("Lütfen Hesap Makinesi Türü Seçiniz: "
+				+"\n"+ "Basit Hesap Makinesi için 1'e basınız."
+				+"\n"+ "Mühendislik Hesap Makinesi için 2'ye basınız.");
+		        int x = scan.nextInt();
+		
+		      //Basit Hesap Makinesi İşlem Başlangıcı
+		        
+		       
+ if(x==1) {
+			
+			System.out.println("Basit Hesap Makinesini Seçtiniz."
+					+"\n"+ "Şimdi Lütfen Yapmak İstediğiniz İşlemi Seçiniz: "
+					+"\n"+ "Toplama İşlemi İçin 1'e Basınız."
+					+"\n"+ "Çıkarma İşlemi İçin 2'ye Basınız."
+					+"\n"+ "Çarpma İşlemi İçin 3'e Basınız."
+					+"\n"+ "Bölme İşlemi İçin 4'e Basınız.");
+			int y = scan.nextInt();
+			if(y==1) {
+				
+				    System.out.println("Toplama İşlemi İçin İlk Sayıyı Giriniz: ");
+				    double a = scan.nextDouble();
+				    System.out.println("Toplama İşlemi İçin İkinci Sayıyı Giriniz: ");
+				    double b = scan.nextDouble();
+				    basit.toplama(a,b);
+			}
+			else if(y==2) {
+				
+			    System.out.println("Çıkarma İşlemi İçin İlk Sayıyı Giriniz: ");
+			    double a = scan.nextDouble();
+			    System.out.println("Çıkarma İşlemi İçin İkinci Sayıyı Giriniz: ");
+			    double b = scan.nextDouble();
+			    basit.cikarma(a,b);
+		  }
+			else if(y==3) {
+				
+			    System.out.println("Çarpma İşlemi İçin İlk Sayıyı Giriniz: ");
+			    double a = scan.nextDouble();
+			    System.out.println("Çarpma İşlemi İçin İkinci Sayıyı Giriniz: ");
+			    double b = scan.nextDouble();
+			    basit.carpma(a,b);
+		 }
+			else if(y==4) {
+				
+			    System.out.println("Bölme İşlemi İçin İlk Sayıyı Giriniz: ");
+			    double a = scan.nextDouble();
+			    System.out.println("Bölme İşlemi İçin İkinci Sayıyı Giriniz: ");
+			    double b = scan.nextDouble();
+			    basit.bolme(a,b);
+		} 
+			else {
+				System.out.println("Yanlış Giriş Yaptınız.");
+				
+			}
+			
+ } //Basit Hesap Makinesi İşlem Sonu
+ //Mühendislik Hesap Makinesi İşlem Başlangıcı
+ else if (x==2) {
+			System.out.println("Mühendislik Hesap Makinesini Seçtiniz."
+					+"\n"+ "Şimdi Lütfen Yapmak İstediğiniz İşlemi Seçiniz: "
+					+"\n"+ "Toplama İşlemi İçin 1'e Basınız."
+					+"\n"+ "Çıkarma İşlemi İçin 2'ye Basınız."
+					+"\n"+ "Çarpma İşlemi İçin 3'e Basınız."
+					+"\n"+ "Bölme İşlemi İçin 4'e Basınız."
+					+"\n"+ "Üs Alma İşlemi İçin 5'e Basınız."
+					+"\n"+ "Kare Kök Alma İşlemi İçin 6'ya Basınız."
+					);
+			int z = scan.nextInt();
+			
+			if(z==1) {
+				
+				System.out.println("Toplama İşlemi İçin İlk Sayıyı Giriniz: ");
+			    double a = scan.nextDouble();
+			    System.out.println("Toplama İşlemi İçin İkinci Sayıyı Giriniz: ");
+			    double b = scan.nextDouble();
+			    muh.toplama(a,b);
+			}
+			
+			else if(z==2) {
+				
+				System.out.println("Çıkarma İşlemi İçin İlk Sayıyı Giriniz: ");
+			    double a = scan.nextDouble();
+			    System.out.println("Çıkarma İşlemi İçin İkinci Sayıyı Giriniz: ");
+			    double b = scan.nextDouble();
+			    muh.cikarma(a,b);
+			}
+			
+            else if(z==3) {
+				
+				System.out.println("Çarpma İşlemi İçin İlk Sayıyı Giriniz: ");
+			    double a = scan.nextDouble();
+			    System.out.println("Çarpma İşlemi İçin İkinci Sayıyı Giriniz: ");
+			    double b = scan.nextDouble();
+			    muh.carpma(a,b);
+			}
+			
+            else if(z==4) {
+				
+				System.out.println("Bölme İşlemi İçin İlk Sayıyı Giriniz: ");
+			    double a = scan.nextDouble();
+			    System.out.println("Bölme İşlemi İçin İkinci Sayıyı Giriniz: ");
+			    double b = scan.nextDouble();
+			    muh.bolme(a,b);
+			}
+			
+               else if(z==5) {
+				
+				System.out.println("Üs Alma İşlemi İçin İlk Sayıyı Giriniz: ");
+			    double a = scan.nextDouble();
+			    System.out.println("Üs Alma İşlemi İçin İkinci Sayıyı Giriniz: ");
+			    double b = scan.nextDouble();
+			    muh.usalma(a,b);
+			}
+			
+               else if(z==6) {
+   				
+   				System.out.println("Karekök Alma İşlemi İçin Sayı Giriniz: ");
+   			    double a = scan.nextDouble();
+   			    muh.karekokalma(a);
+   			}
+			
+			
+			
+               else {
+            	   System.out.println("Yanlış Giriş Yaptınız.");
+            	   
+               }
+			
+ }// Mühendislik Hesap Makinesi İşlem Sonu
+ 
+ else {
+			
+			System.out.println("Yanlış Seçim Yaptınız.");
+			continue;
+		}
+	  }
+		
+	}
+
+}
